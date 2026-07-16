@@ -581,4 +581,5 @@ grid-template-columns:1fr;
 
 #about p{
 margin-bottom:12px;
+text-align: justify;
 }
