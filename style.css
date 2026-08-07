@@ -583,3 +583,24 @@ grid-template-columns:1fr;
 margin-bottom:12px;
 text-align: justify;
 }
+
+
+.visitor-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    opacity: 0.65;
+}
+
+.visitor-counter img {
+    height: 20px;
+    width: auto;
+    border: none;
+    display: block;
+}
+
+.visitor-icon {
+    font-size: 14px;
+}
