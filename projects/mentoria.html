@@ -38,59 +38,192 @@ O MentorIA foi concebido como uma plataforma de apoio pedagógico baseada em Int
 <h2>O Meu Papel</h2>
 
 <p>
-Participei no desenvolvimento da plataforma MentorIA, contribuindo para a implementação da API em ASP.NET Core, integração entre frontend e backend, autenticação de utilizadores e integração com a API da OpenAI para geração de feedback pedagógico inteligente.
-
-O projeto permitiu-me consolidar conhecimentos em desenvolvimento Full Stack, consumo de APIs, autenticação JWT e integração de serviços externos.
+ Participei no desenvolvimento da plataforma MentorIA, uma solução de apoio
+    pedagógico baseada em Inteligência Artificial. Contribuí para o desenvolvimento
+    da API em ASP.NET Core, integração entre frontend e backend, autenticação de
+    utilizadores e integração da OpenAI API para geração automatizada de feedback
+    pedagógico contextualizado.
 </p>
 
-<h2>Principais Contribuições</h2>
+<p>
+    A componente de Inteligência Artificial envolveu a construção dinâmica de
+    prompts estruturados, preparação do contexto enviado ao modelo de linguagem
+    e definição de instruções para orientar a geração das respostas. O sistema
+    utiliza informações da actividade, resposta do estudante, critérios de
+    avaliação e, quando disponível, a correcção do docente para produzir
+    feedback personalizado.
+</p>
+
+<p>
+    O projecto proporcionou experiência prática na aplicação de Inteligência
+    Artificial Generativa a uma solução real, incluindo integração de LLMs
+    através de APIs, Prompt Engineering, processamento e persistência dos
+    resultados gerados pela IA. Também foram considerados aspectos de qualidade
+    das respostas, segurança, custo, desempenho e viabilidade da utilização
+    de modelos de linguagem.
+</p>
+
+<div class="feature-block">
+<h3>Principais Contribuições</h3>
 
 <ul>
 
-<li>Desenvolvimento da API REST utilizando ASP.NET Core.</li>
+    <li>
+        Desenvolvimento da API REST utilizando ASP.NET Core.
+    </li>
 
-<li>Desenvolvimento da interface web em React.</li>
+    <li>
+        Desenvolvimento da interface web utilizando React.
+    </li>
 
-<li>Integração entre frontend e backend através de APIs REST.</li>
+    <li>
+        Integração entre frontend e backend através de APIs REST.
+    </li>
 
-<li>Implementação de autenticação JWT e gestão de utilizadores.</li>
+    <li>
+        Implementação de autenticação JWT e gestão de utilizadores.
+    </li>
 
-<li>Integração com a API da OpenAI.</li>
+    <li>
+        Integração da OpenAI API para utilização de modelos de linguagem
+        na geração de feedback pedagógico.
+    </li>
 
-<li>Modelação da base de dados em SQL Server.</li>
+    <li>
+        Implementação de Prompt Engineering através da construção dinâmica
+        de prompts estruturados.
+    </li>
 
-<li>Testes e validação das funcionalidades.</li>
+    <li>
+        Preparação e organização do contexto enviado ao modelo, incluindo
+        informações da actividade, resposta do estudante e critérios de avaliação.
+    </li>
+
+    <li>
+        Definição de instruções para orientar o modelo na geração de feedback
+        segundo uma metodologia pedagógica predefinida.
+    </li>
+
+    <li>
+        Processamento e persistência dos resultados gerados pela IA na base
+        de dados, permitindo manter o histórico das interacções.
+    </li>
+
+    <li>
+        Modelação e implementação da base de dados em SQL Server.
+    </li>
+
+    <li>
+        Testes e validação das funcionalidades e dos resultados produzidos
+        pelo sistema.
+    </li>
+
+    <li>
+        Análise da viabilidade técnica e financeira da utilização de modelos
+        de linguagem, considerando consumo de tokens, custo, desempenho e
+        utilização prevista.
+    </li>
 
 </ul>
-
+</div>
 <div class="feature-block">
     <h3>Funcionalidades Principais</h3>
+
     <ul>
+
         <li>Gestão de disciplinas e módulos académicos</li>
+
         <li>Definição de competências por disciplina</li>
-        <li>Criação de atividades de diagnóstico</li>
+
+        <li>Criação de actividades de diagnóstico</li>
+
         <li>Configuração de critérios de avaliação pelos docentes</li>
+
         <li>Diagnóstico automático de competências</li>
-        <li>Feedback pedagógico personalizado baseado em IA</li>
+
+        <li>Geração de feedback pedagógico personalizado com Inteligência Artificial</li>
+
+        <li>Utilização de contexto académico para orientar a resposta do modelo</li>
+
         <li>Identificação de pontos fortes e lacunas de aprendizagem</li>
+
         <li>Recomendações de melhoria para estudantes</li>
+
+        <li>Persistência e rastreabilidade dos resultados gerados pela IA</li>
+
     </ul>
 </div>
 
 <div class="feature-block">
-    <h3>Tecnologias Utilizadas</h3>
-    <div class="tech-badges">
-        <span>ASP.NET Core Web API</span>
-        <span>REST APIs</span>
-        <span>React (Vite)</span>
-        <span>OpenAI API</span>
-        <span>SQL Server</span>
-        <span>Entity Framework Core</span>
-        <span>Autenticação JWT</span>
-        <span>ASP.NET Identity</span>
-        <span>Git</span>
-        
-    </div>
+
+    <h3>Implementação da Inteligência Artificial</h3>
+
+    <p>
+        O MentorIA utiliza a OpenAI API para gerar feedback pedagógico
+        contextualizado. Antes de efectuar a requisição, o sistema reúne os
+        dados relevantes da actividade e constrói dinamicamente um prompt
+        estruturado.
+    </p>
+
+    <p>
+        O contexto enviado ao modelo pode incluir o título e enunciado da
+        actividade, resposta do estudante, competências avaliadas, critérios
+        definidos pelo docente e correcção docente, quando disponível.
+    </p>
+
+    <p>
+        As instruções do prompt orientam o modelo sobre como analisar a resposta
+        e estruturar o feedback. A metodologia pedagógica definida para o sistema
+        segue uma sequência de <strong>Confirmar, Esclarecer, Orientar e Ampliar</strong>,
+        procurando tornar o feedback mais relevante e útil para o estudante.
+    </p>
+
+    <p>
+        Após a geração, o resultado é processado pela aplicação e armazenado
+        na base de dados, associado ao estudante e à actividade correspondente.
+        Este fluxo permite manter o histórico e a rastreabilidade dos resultados
+        produzidos pela Inteligência Artificial.
+    </p>
+
+</div>
+
+<div class="feature-block">
+
+    <h3>Viabilidade e Escolha do Modelo</h3>
+
+    <p>
+        Durante o desenvolvimento foi analisada a viabilidade da utilização de
+        modelos de linguagem considerando factores como custo por utilização,
+        consumo de tokens, desempenho e adequação ao caso de uso.
+    </p>
+
+    <p>
+        A escolha do modelo procurou equilibrar <strong>custo, desempenho,
+        velocidade e qualidade das respostas</strong>, considerando também a
+        possibilidade de utilização simultânea por vários utilizadores.
+    </p>
+
+</div>
+
+<div class="feature-block">
+<h3>Tecnologias Utilizadas</h3>
+
+<div class="tech-badges">
+    <span>C#</span>
+    <span>ASP.NET Core Web API</span>
+    <span>REST APIs</span>
+    <span>React</span>
+    <span>Vite</span>
+    <span>OpenAI API</span>
+    <span>IA Generativa</span>
+    <span>Prompt Engineering</span>
+    <span>LLM Integration</span>
+    <span>SQL Server</span>
+    <span>Entity Framework Core</span>
+    <span>JWT Authentication</span>
+    <span>ASP.NET Identity</span>
+    <span>Git</span>
+</div>
 </div>
 
 <div class="impact">
